@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -9,10 +9,7 @@ def index():
 
 @app.route("/response")
 def response():
-    headers(
-        "Content-Type": "text,html"
-    )
-    return Response("Uma resposta do servidor", 200, headers=headers)
+       return "Uma resposta do servidor"
 
 @app.route("/posts")
 def posts():
@@ -25,4 +22,4 @@ def posts():
     return data
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
