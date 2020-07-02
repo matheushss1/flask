@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/home/m4th3u5/apps/02-database-manager/.venv/bin/python3"
+    "python.pythonPath": "/home/m4th3u5/apps/02-database-manager/.venv/bin/python3",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint-flask"
+    ]
 }
