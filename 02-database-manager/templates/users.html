@@ -1,3 +1,4 @@
+{%  if not current_user.is_authenticated %}
 <body>
     {% for user in users %}
         <ul>
@@ -6,3 +7,13 @@
         
     {% endfor %}
 </body>
+<nav>
+    
+    <a href="{{  url_for('login')  }}">Entrar</a>
+    <a href="{{  url_for('register')  }}">Cadastre-se</a>
+</nav>
+{% else %}
+<nav>    
+    <a href="{{  url_for('logout')  }}">Sair</a>
+</nav> 
+{% endif %}
